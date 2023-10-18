@@ -5,8 +5,8 @@ function getPosts()
     try {
         $database = new PDO(
             'mysql:host=localhost;dbname=blog;charset=utf8',
-            'blog',
-            'password'
+            'root',
+            'root'
         );
     } catch (Exception $e) {
         die('Erreur : ' . $e->getMessage());
@@ -26,4 +26,3 @@ function getPosts()
     }
     return $posts;
 }
-?>
