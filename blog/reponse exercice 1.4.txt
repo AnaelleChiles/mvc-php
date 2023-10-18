@@ -1,3 +1,0 @@
--La connection a la bdd dans la même page que l'affichage
--Pas besoin de preciser les secondes dans l'heure
--
