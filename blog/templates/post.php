@@ -7,7 +7,7 @@
 <div class="news">
     <h3>
         <?= htmlspecialchars($post->title) ?>
-        <em>le <?= $post->frenchCreationDate?></em>
+        <em>le <?= $post->frenchCreationDate ?></em>
     </h3>
 
     <p>
@@ -17,7 +17,7 @@
 
 <h2>Commentaires</h2>
 
-<form action="index.php?action=addComment&id=<?= $post->id ?>" method="post">
+<form action="index.php?action=addComment&id=<?= $post->identifier ?>" method="post">
    <div>
       <label for="author">Auteur</label><br />
       <input type="text" id="author" name="author" />

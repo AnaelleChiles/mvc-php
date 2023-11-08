@@ -7,8 +7,7 @@ class Comment
     public $comment;
 }
 
-
-function getComments(string $post)
+function getComments(string $post): array
 {
     $database = commentDbConnect();
     $statement = $database->prepare(
@@ -18,12 +17,12 @@ function getComments(string $post)
 
     $comments = [];
     while (($row = $statement->fetch())) {
-        $Comment = new Comment();
-        $Comment->frenchCreationDate = $row['french_creation_date'];
-        $Comment->author = $row['author'];
-        $Comment->comment = $row['comment'];
+        $comment = new Comment();
+        $comment->author = $row['author'];
+        $comment->frenchCreationDate = $row['french_creation_date'];
+        $comment->comment = $row['comment'];
 
-        $comments[] = $Comment;
+        $comments[] = $comment;
     }
 
     return $comments;
